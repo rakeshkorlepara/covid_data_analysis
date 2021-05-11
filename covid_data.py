@@ -97,7 +97,7 @@ def main():
 
     conn = etl.create_database("ny_covid.sqlite")
     func = partial(etl.create_tables_county_m, ny_data, conn)
-    with ThreadPoolExecutor(max_workers=4) as t:
+    with ThreadPoolExecutor(max_workers=1) as t:
         t.map(func, list(county_dict.keys()))
 
     etl.create_final_table(conn, list(county_dict.keys()))

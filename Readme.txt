@@ -1,5 +1,6 @@
 1. Make sure all the requirements.txt are installed --> pip install -r requirements.txt
 2. Run the python program with python3.6 --> python covid_data.py
+3. Make sure to add the following command to crontab -e "0 15 *   *   *     python yourpath/covid_data.py"
 
 Assumptions:
 
